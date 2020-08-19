@@ -1,0 +1,204 @@
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgb(78, 253, 122), rgb(0, 255, 191));
+    margin: 0px;
+}
+
+.package {
+    display: inline-block;
+    position: absolute;
+    background-color: rgb(243, 64, 88);
+    border-color: rgb(189, 40, 60);
+}
+
+
+#wrapper {
+    display: block;
+    position: relative;
+    flex: 1 1 1;
+    align-self: center;
+    height: 900px;
+    width: 900px;
+    border: 5px solid white;
+    box-shadow: 0 0 5px black;
+}
+
+#left, #right {
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    z-index: 2;
+}
+
+#left {
+    left: 0px;
+    border-right: 2px solid rgb(189, 40, 60);
+}
+
+#right {
+    right: 0px;
+    border-left: 2px solid rgb(189, 40, 60);
+}
+
+#up, #down {
+    width: 100%;
+    height: 50%;
+    left: 0px;
+    z-index: 1;
+}
+
+#up {
+    top: 0px;
+    border-bottom: 2px solid rgb(189, 40, 60);
+}
+
+#down {
+    bottom: 0px;
+    border-top: 2px solid rgb(189, 40, 60);
+}
+
+#gift {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: yellowgreen;
+    background-image: url('mimi.jpg');
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+@font-face {
+    font-family: digimon;
+    src: url(DigimonBasic.ttf);
+}
+
+#content {
+    flex: 1 1 1;
+    align-self: center;
+    font-size: 125px;
+    font-family: digimon;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 0 5px rgb(255, 0, 221);
+    text-align: center;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+    z-index: 10;
+}
+
+#outer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nastro {
+    display: inline-block;
+    position: absolute;
+    background-color: rgb(241, 155, 155);
+    z-index: 4;
+    box-shadow: 0 0 2px black;
+}
+
+#vt {
+    width: 80px;
+    height: 100%;
+    left: 410px;
+    top: 0px;
+}
+
+#hz {
+    height: 80px;
+    width: 100%;
+    top: 410px;
+    left: 0px;
+}
+
+#palmon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+#prompt {
+    position: absolute;
+    align-self: center;
+    flex: 1 1 1;
+    z-index: 99;
+    animation: glow 2s infinite linear;
+    color: rgb(255, 184, 184);
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgb(241, 197, 214);
+}
+
+@keyframes glow {
+      0% {text-shadow: 0 0 7px rgb(161, 89, 117);}
+     50% {text-shadow: 0 0 3px rgb(161, 89, 117);}
+    100% {text-shadow: 0 0 7px rgb(161, 89, 117);}
+}
+
+@media only screen and (max-width: 900px), (max-height: 900px) {
+    #content {
+        font-size: 80px;
+    }
+
+    #wrapper {
+        width: 600px;
+        height: 600px;
+    }
+
+    #vt {
+        left: 280px;
+        width: 40px;
+    }
+
+    #hz {
+        top: 280px;
+        height: 40px;
+    }
+
+    #prompt {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 600px), (max-height: 600px) {
+    #content {
+        font-size: 40px;
+    }
+
+    #wrapper {
+        width: 350px;
+        height: 350px;
+    }
+
+    #vt {
+        left: 155px;
+        width: 40px;
+    }
+
+    #hz {
+        top: 155px;
+        height: 40px;
+    }
+
+    #prompt {
+        font-size: 40px;
+    }
+    
+}
